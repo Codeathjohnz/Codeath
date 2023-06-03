@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <script>
+   function validateform(){
+     var username=document.myform.name.value;
+     var password=document.myform.password.value;
+ 
+     if (username=="admin" && password=="admin"){
+       alert("Login Successful");
+       window.location="https://codeathjohnz.github.io/Codeath/Olaguir_LabActivity8.html";
+       return false;
+     }
+     else if(password!="admin"){
+       alert("Password is incorrect.");
+       return false;
+     }
+   }
+  </script>
+  <style>
+    body {
+      font-family: Copperplate, Arial, sans-serif;
+      background-image: url('https://24.media.tumblr.com/54c905f752bf32d1fd6a5699682fc73a/tumblr_mwfjh8hvE41qzl9pho1_400.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    
+    .heading {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://codeathjohnz.github.io/Codeath/Welcoo1.jpg" alt="Logo">
+    </div>
+    <h2 class="heading">Sign in to Welcoo</h2>
+    <form name="myform" action="https://codeathjohnz.github.io/Codeath/Olaguir_LabActivity8.html" onsubmit="return validateform()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
